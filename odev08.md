@@ -1,10 +1,14 @@
+1. test veritabanınızda employee isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım.
+```SQL
 CREATE TABLE employee (
 	        id INTEGER Primary Key,
 	        name VARCHAR(50),
 	        birthday DATE,
 	        email VARCHAR(100)
 );
-
+```
+2. Oluşturduğumuz employee tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
+```SQL
 insert into employee (id, name, email, birthday) values (1, 'Mildred', 'mchurms0@clickbank.net', '2005-11-20');
 insert into employee (id, name, email, birthday) values (2, 'Sheilah', 'sgurnay1@pinterest.com', '2029-11-30');
 insert into employee (id, name, email, birthday) values (3, 'Cthrine', 'cotton2@webmd.com', '2013-02-16');
@@ -55,8 +59,9 @@ insert into employee (id, name, email, birthday) values (47, 'Norrie', 'naxell1a
 insert into employee (id, name, email, birthday) values (48, 'Erinn', 'evinker1b@yellowpages.com', '2025-11-20');
 insert into employee (id, name, email, birthday) values (49, 'Wynn', 'wharraway1c@lycos.com', '2002-03-13');
 insert into employee (id, name, email, birthday) values (50, 'Biron', 'bbeveridge1d@mediafire.com', '2030-01-25');
-
-
+```
+3. Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
+```SQL
 UPDATE employee
 SET name = 'Eva'
 WHERE id = 1;
@@ -76,8 +81,9 @@ WHERE email = 'omendesj@ask.com';
 UPDATE employee
 SET birthday = '2010-10-23', email = 'wly@stan.com'
 WHERE id = 5;
-
-
+```
+4. Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
+```SQL
 DELETE FROM employee
 WHERE id = 13;
 
@@ -92,7 +98,7 @@ WHERE email = 'bstollenbecker14@jigsy.com';
 
 DELETE FROM employee
 WHERE id = 48 AND email = 'evinker1b@yellowpages.com';
-
+```
 
 
 
